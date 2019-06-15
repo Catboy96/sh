@@ -1,8 +1,8 @@
 #!/bin/bash
 ###############
 # Install & Configure PetaLinux 2019.1 on Ubuntu 18.04 LTS
-# by Catboy96 <me@ralf.ren>
-# availiable on github.com/catboy96/#!/bin/sh
+# By Catboy96 <me@ralf.ren>
+# Availiable on github.com/catboy96/#!/bin/sh
 ###############
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
@@ -37,7 +37,7 @@ function installDependencies() {
 function createDir() {
   install_dir="$2"
   echo "Making installation directory..."
-  sudo mkdir -p install_dir
+  sudo mkdir -p $install_dir
   sudo chown -R $USER $install_dir
   echo "Done."
   echo "Making default TFTP directory..."
