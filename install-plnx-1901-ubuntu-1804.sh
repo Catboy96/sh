@@ -2,7 +2,7 @@
 ###############
 # Install & Configure PetaLinux 2019.1 on Ubuntu 18.04 LTS
 # By Catboy96 <me@ralf.ren>
-# Availiable on github.com/catboy96/#!/bin/sh
+# Availiable on github.com/catboy96/sh
 ###############
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
