@@ -1,7 +1,7 @@
 _goto() {
       local cur prev nodes
       COMPREPLY=()
-      cur="${COMP_WORDS[COMP_CWORD]}“
+      cur="${COMP_WORDS[COMP_CWORD]}"
       prev="${COMP_WORDS[COMP_CWORD-1]}"
       screens=$(ls /var/run/screen/S-$USER | grep -oP "(?<=\.).*")
 
@@ -10,4 +10,4 @@ _goto() {
               COMPREPLY=( $(compgen -W "${screens}" -- ${cur}) )
               return;;
       esac
-  } complete -o default -F _goto goto
+} complete -o default -F _goto goto
