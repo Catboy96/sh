@@ -15,6 +15,6 @@ sed -e '/alias goto/d' ~/.bashrc > ~/.bashrc
 sed -e '/alias new/d' ~/.bashrc > ~/.bashrc
 
 echo "Disabling tab complete..."
-sudo rm -f /etc/bash_completion.d/goto
+sudo rm -f /etc/bash_completion.d/easy-screen
 
 echo "Now, run 'source ~/.bashrc' to disable patches."
