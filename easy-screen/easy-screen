@@ -10,4 +10,4 @@ _goto() {
               COMPREPLY=( $(compgen -W "${screens}" -- ${cur}) )
               return;;
       esac
-} complete -o default -F _goto goto
+}; complete -o default -F _goto goto
