@@ -8,6 +8,12 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 export PATH
 
+echo "Updating APT source..."
+sudo apt update
+
+echo "Installing screen..."
+sudo apt install screen -y
+
 echo "Making alias..."
 echo "" >> ~/.bashrc
 echo "# Easy screen patch" >> ~/.bashrc
