@@ -8,8 +8,8 @@ if __name__ == '__main__':
     for i in range(int(sys.argv[1]), int(sys.argv[2]) + 1):
         print(f'Product ID {i}... ', end='')
         r = requests.get(f'{url}{i}', allow_redirects=False)
-        if r.status_code != 302:
-            print('X')
+        if r.status_code == 200:
+            print('Out of stock')
             continue
         if r.headers.get('Location').endswith("cart.php"):
             print('X')
