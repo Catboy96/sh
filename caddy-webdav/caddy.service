@@ -1,0 +1,13 @@
+[Unit]
+Description=Caddy HTTP/2 web server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/caddy.pid
+ExecStart=/usr/local/bin/caddy -agree -conf /etc/caddy/Caddyfile
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

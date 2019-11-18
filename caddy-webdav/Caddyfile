@@ -1,0 +1,11 @@
+DOMAINNAME {
+    root /var/webdav
+    timeouts none
+    tls MAIL
+    gzip
+    basicauth / USERNAME PASSWORD
+    webdav {
+        scope /var/webdav
+        block dotfiles
+    }
+}
