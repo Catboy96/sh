@@ -35,6 +35,7 @@ sed -i "s/DOMAINNAME/$domain/g" /etc/caddy/Caddyfile
 sed -i "s/MAIL/$email/g" /etc/caddy/Caddyfile
 sed -i "s/USERNAME/$user/g" /etc/caddy/Caddyfile
 sed -i "s/PASSWORD/$pass/g" /etc/caddy/Caddyfile
+mkdir -p /var/webdav/
 
 echo "Configurating service..."
 wget https://raw.githubusercontent.com/Catboy96/sh/master/caddy-webdav/caddy.service -O /etc/systemd/system/caddy.service
@@ -43,3 +44,4 @@ systemctl start caddy.service
 
 echo "Done. You can check Caddy running status by 'systemctl status caddy'."
 echo "Also, consider increasing files limit by 'ulimit -n 8192' then restart Caddy."
+echo "WebDAV root is set to '/var/webdav'."
