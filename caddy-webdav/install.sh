@@ -36,7 +36,7 @@ sed -i "s/USERNAME/$user/g" /etc/caddy/Caddyfile
 sed -i "s/PASSWORD/$pass/g" /etc/caddy/Caddyfile
 
 echo "Configurating service..."
-wget https://raw.githubusercontent.com/Catboy96/sh/master/caddy-webdav/caddy.service -O /usr/lib/systemd/system/caddy.service
+wget https://raw.githubusercontent.com/Catboy96/sh/master/caddy-webdav/caddy.service -O /etc/systemd/system/caddy.service
 systemctl enable caddy.service
 systemctl start caddy.service
 
