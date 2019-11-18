@@ -18,7 +18,7 @@ systemctl stop caddy.service
 
 echo "Removing service..."
 systemctl disable caddy.service
-rm -f /usr/lib/systemd/system/caddy.service
+rm -f /etc/systemd/system/caddy.service
 
 echo "Removing configuration file..."
 rm -rf /etc/caddy
