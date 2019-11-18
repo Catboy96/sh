@@ -31,7 +31,7 @@ echo "Configurating Caddy..."
 mkdir -p /etc/caddy/
 wget https://raw.githubusercontent.com/Catboy96/sh/master/caddy-webdav/Caddyfile -O /etc/caddy/Caddyfile
 sed -i "s/DOMAINNAME/$domain/g" /etc/caddy/Caddyfile
-sed -i "s/EMAIL/$email/g" /etc/caddy/Caddyfile
+sed -i "s/MAIL/$email/g" /etc/caddy/Caddyfile
 sed -i "s/USERNAME/$user/g" /etc/caddy/Caddyfile
 sed -i "s/PASSWORD/$pass/g" /etc/caddy/Caddyfile
 
