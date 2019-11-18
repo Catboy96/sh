@@ -19,6 +19,7 @@ read -p "Domain name: " domain
 read -p "Email (for Let's Encrypt): " email
 read -p "WebDAV username: " user
 read -p "WebDAV password: " pass
+echo ""
 
 echo "Installing cURL..."
 apt update
