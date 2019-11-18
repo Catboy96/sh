@@ -18,7 +18,7 @@ echo "Customize your WebDAV installation:"
 domain=$(read -p "Domain name: ")
 email=$(read -p "Email (for Let's Encrypt): ")
 user=$(read -p "WebDAV username: ")
-pass=$(read -p "WebDAV password")
+pass=$(read -p "WebDAV password: ")
 
 echo "Installing cURL..."
 apt update
