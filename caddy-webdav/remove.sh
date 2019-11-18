@@ -17,7 +17,7 @@ echo "Stopping Caddy..."
 systemctl stop caddy.service
 
 echo "Removing service..."
-systectl disable caddy.service
+systemctl disable caddy.service
 rm -f /usr/lib/systemd/system/caddy.service
 
 echo "Removing configuration file..."
