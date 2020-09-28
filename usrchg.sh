@@ -20,7 +20,7 @@ init() {
     echo "[usrchg] Setting root password to enable root temporarily"
     sudo passwd root
     echo "[usrchg] Enable root login via SSH"
-    sudo sed -e 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+    sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
     sudo systemctl restart sshd.service
     echo ""
     echo "[usrchg] Now login via SSH using root,"
@@ -37,7 +37,7 @@ change() {
     echo "[usrchg] Disable root"
     passwd -l root
     echo "[usrchg] Disable root login via SSH"
-    sed -e 's/PermitRootLogin yes/#PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
+    sed -i 's/PermitRootLogin yes/#PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
     systemctl restart sshd.service
     echo ""
     echo "[usrchg] Now login via SSH using new username"
