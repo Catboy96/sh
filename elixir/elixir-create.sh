@@ -6,7 +6,7 @@ repo=$2
 mkdir /opt/elixir-data/$name
 
 pushd /opt/elixir-data/$name
-proxychains git clone $repo repo
+git clone $repo repo
 mkdir data
 popd
 
